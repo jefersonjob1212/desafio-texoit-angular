@@ -1,20 +1,16 @@
 import { Component } from '@angular/core';
-import { LoaderService } from '../../services/loader.service';
-import { LoaderModule } from './loader.module';
-import { Subject } from 'rxjs';
-import { CommonModule } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
+import { LoaderService } from 'app/shared/services/loader.service';
 
 @Component({
   selector: 'app-loader',
   standalone: true,
-  imports: [CommonModule, LoaderModule],
+  imports: [AsyncPipe],
   templateUrl: './loader.component.html',
-  styleUrl: './loader.component.scss'
+  styleUrl: './loader.component.scss',
 })
 export class LoaderComponent {
 
-  public loading: Subject<boolean> = this.loaderService.isLoading();
-
-  constructor(private loaderService: LoaderService) {}
+  constructor(public loaderService: LoaderService) {}
 
 }

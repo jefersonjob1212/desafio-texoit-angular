@@ -1,1 +1,5 @@
-<!-- <img src="loader-256-256.gif" [hidden]="loading" /> -->
+@if ((loaderService.isLoading | async)) {
+    <div class="progress-bar">
+        <div class="progress-bar-value"></div>
+    </div>
+}

@@ -2,11 +2,11 @@
     <table class="table table-striped table-bordered">
         <thead [className]="classHeader">
             <tr>
-                <th scope="col" *ngFor="let column of columnsHeader">
+                <th class="text-center" scope="col" *ngFor="let column of columnsHeader">
                     {{ column.columnLabel }}
                     <div *ngIf="column.filterOptions">
                         <input *ngIf="column.filterOptions.type === 1" class="form-control" type="number"
-                            [name]="column.columnName" (keyup)="filterByInput($event, column.filterOptions.maxlength)">
+                            [name]="column.columnName" (keyup)="filterByInput($event, column.filterOptions.maxlength)" (change)="$event.stopPropagation()">
                         <select *ngIf="column.filterOptions.type === 2" [name]="column.columnName" class="form-control"
                             (change)="filterBySelect($event)">
                             <option *ngFor="let option of column.filterOptions.options" [value]="option.id">

@@ -1,24 +1,20 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoaderService {
+  public concurrentReq = 0;
+  private _isLoading = new BehaviorSubject<number>(0);
 
-  private isLoading$: Subject<boolean> = new Subject<boolean>();
+  isLoading = this._isLoading.asObservable();
 
-  constructor() { }
-
-  show(): void {
-    this.isLoading$.next(true);
+  show() {
+    this._isLoading.next(++this.concurrentReq);
   }
 
-  hide(): void {
-    this.isLoading$.next(false);
-  }
-
-  isLoading(): Subject<boolean> {
-    return this.isLoading$;
+  hide() {
+    this._isLoading.next(--this.concurrentReq);
   }
 }

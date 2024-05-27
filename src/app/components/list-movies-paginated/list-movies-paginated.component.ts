@@ -82,7 +82,9 @@ export class ListMoviesPaginatedComponent
 
   filterByTableFields(event: any): void {
     const element = event.target;
-    if (element.name === 'year') this.year = element.value;
+    if (element.name === 'year') {
+      this.year = element.value;
+    }
     if (element.name === 'winner') {
       const value = element.value;
       if (value === 'null') this.winner = undefined;
