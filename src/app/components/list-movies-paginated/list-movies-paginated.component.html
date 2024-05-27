@@ -1,0 +1,6 @@
+<app-table [columnsHeader]="columnsHeader" [data]="dados" (filter)="filterByTableFields($event)"></app-table>
+<div *ngIf="showPagination">
+    <app-pagination [page]="actualPage" [totalPages]="totalPages" (first)="changePage($event)"
+        (last)="changePage($event)" (next)="changePage($event)" (prev)="changePage($event)"
+        (selectPage)="changePage($event)"></app-pagination>
+</div>

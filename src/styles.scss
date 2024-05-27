@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+.min-vh-85 {
+    min-height: 89vh !important;
+}
+
+@media (max-width: 768px) {
+    .min-vh-85 {
+        min-height: 96vh !important;
+    }
+}

@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-body-tertiary me-0">
+            <div class="d-flex flex-column align-items-sm-start px-3 pt-2 min-vh-100 overflow-hidden">
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start">
+                    <li class="nav-item">
+                        <a class="nav-link align-middle"
+                            routerLinkActive="active"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            #homeLink="routerLinkActive"
+                            ariaCurrentWhenActive="page"
+                            routerLink="/">
+                            <i class="bi bi-speedometer"></i>&nbsp;
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link align-middle" routerLink="/list-movies" 
+                            routerLinkActive="active"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            #listLink="routerLinkActive"
+                            ariaCurrentWhenActive="page"
+                            [class.active]="listLink.isActive">
+                            <i class="bi bi-table"></i>&nbsp;
+                            List
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-auto col-md-9 col-xl-10">
+            <router-outlet />
+        </div>
+    </div>
+</div>

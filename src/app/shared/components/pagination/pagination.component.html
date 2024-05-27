@@ -1,0 +1,25 @@
+<ul class="pagination justify-content-center">
+    <li class="page-item">
+        <a class="page-link" (click)="first()" [ngClass]="{ 'disabled': isFirstPage() }">
+            <i class="bi bi-rewind-fill"></i>
+        </a>
+    </li>
+    <li class="page-item">
+        <a class="page-link" (click)="prev()" [ngClass]="{ 'disabled': isFirstPage() }">
+            <i class="bi-caret-left-fill"></i>&nbsp;
+        </a>
+    </li>
+    <li class="page-item" *ngFor="let p of pagesToShow">
+        <a class="page-link" [ngClass]="{ 'active': p === page }" (click)="selectPage(p)">{{ p + 1 }}&nbsp;</a>
+    </li>
+    <li class="page-item">
+        <a class="page-link" (click)="next()" [ngClass]="{ 'disabled': isLastPage() }">
+            <i class="bi-caret-right-fill"></i>&nbsp;
+        </a>
+    </li>
+    <li class="page-item">
+        <a class="page-link" (click)="last()" [ngClass]="{ 'disabled': isLastPage() }">
+            <i class="bi-fast-forward-fill"></i>&nbsp;
+        </a>
+    </li>
+</ul>
