@@ -1,7 +1,7 @@
 # Desafio desenvolvimento Texo IT
 
 ## 📝 Descrição
-Essa aplicação foi desenvolvida para avaliar a minhas stacks em JavaScript
+Essa aplicação foi desenvolvida para avaliar a minha experiência com JavaScript e Angular.
 
 ## 🛠️ Linguagens e ferramentas utilizadas:
 - [Angular](https://angular.dev)
