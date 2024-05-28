@@ -1,27 +1,34 @@
-# Teste
+# Desafio desenvolvimento Texo IT
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+## 📝 Descrição
+Essa aplicação foi desenvolvida para avaliar a minhas stacks em JavaScript
 
-## Development server
+## 🛠️ Linguagens e ferramentas utilizadas:
+- [Angular](https://angular.dev)
+- CSS
+- [NodeJS](https://nodejs.org/)
+- [Jasmine](https://jasmine.github.io/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🔍 Instruções para rodar o projeto
 
-## Code scaffolding
+Este projeto foi desenvolvido em Angular 17, a versão mais estável e recente (inicialmente estava no Angular 18, mas como ele foi lançado recentemente, resolvi entregar com o Angular 17). Para rodar o projeto, é preciso ter o NodeJS versão 18.13.* ou superior para executá-lo e instalar as dependências. 
+- Para verificar a versão do Node, basta digitar o comando:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> <code>node -v</code>
 
-## Build
+- Instalar as depenências com o comando <code>npm install</code>
+- Depois para rodar o projeto bastar executar o seguinte comando:
+> <code>npm run start</code>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Caso possua o Angular instalado globalmente, basta rodar o seguinte comando:
+> <code>ng serve</code>
 
-## Running unit tests
+## ⚗️ Instruções para rodar os testes unitários
+Seguindo o padrão do framework Angular, foi utilizado o Jasmine para construção de testes unitários. Para executá-los, basta executar o seguinte comando:
+> <code>npm test</code>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Caso tenha o Angular instalado globalmente, basta rodar o seguinte comando:
+> <code>ng test</code>
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Autor
+[Jeferson Job](https://www.linkedin.com/in/jeferson-job-923027117/)
