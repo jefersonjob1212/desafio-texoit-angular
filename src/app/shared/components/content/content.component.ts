@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { MoviesService } from 'app/services/movies.service';
 import { LoaderComponent } from '../loader/loader.component';
 
 @Component({

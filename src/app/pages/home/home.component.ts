@@ -20,32 +20,5 @@ import { TableComponent } from 'app/shared/components/table/table.component';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  // columnsHeader: IColumnHeaderOptions[] = [
-  //   { columnName: 'id', columnLabel: 'ID' },
-  //   {
-  //     columnName: 'year',
-  //     columnLabel: 'Year',
-  //     filterOptions: {
-  //       type: FilterTypeEnum.INPUT_NUMBER,
-  //     },
-  //   },
-  //   { columnName: 'title', columnLabel: 'Title' },
-  //   {
-  //     columnName: 'winner',
-  //     columnLabel: 'Winner?',
-  //     filterOptions: {
-  //       type: FilterTypeEnum.SELECT,
-  //       options: [
-  //         { id: null, label: 'Yes/No' },
-  //         { id: true, label: 'Yes' },
-  //         { id: false, label: 'No' },
-  //       ],
-  //     },
-  //   },
-  // ];
   constructor() {}
-
-  // testCHange(event: any) {
-  //   console.log(event.target.value)
-  // }
 }

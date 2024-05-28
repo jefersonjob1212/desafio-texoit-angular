@@ -1,10 +1,12 @@
 import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import { AppComponent } from './app.component'; 
+import { RouterModule } from '@angular/router';
+import { By } from '@angular/platform-browser';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [AppComponent, RouterModule.forRoot([])],
     }).compileComponents();
   });
 
@@ -14,16 +16,12 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'teste' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('teste');
-  });
-
-  it('should render title', () => {
+  it('should create elements navbar and content', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, teste');
+    const debugNavbarElement = fixture.debugElement.query(By.css('app-navbar'));
+    const debugContentElement = fixture.debugElement.query(By.css('app-content'));
+    expect(debugNavbarElement).toBeTruthy();
+    expect(debugContentElement).toBeTruthy();
   });
 });

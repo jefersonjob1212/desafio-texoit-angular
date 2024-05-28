@@ -21,16 +21,16 @@ export class PaginationComponent implements OnChanges, OnDestroy {
   totalPages: number = 0;
 
   @Output('prev')
-  private prev$: Subject<number> = new Subject<number>();
+  prev$: Subject<number> = new Subject<number>();
 
   @Output('next')
-  private next$: Subject<number> = new Subject<number>();
+  next$: Subject<number> = new Subject<number>();
 
   @Output('first')
-  private first$: Subject<number> = new Subject<number>();
+  first$: Subject<number> = new Subject<number>();
 
   @Output('last')
-  private last$: Subject<number> = new Subject<number>();
+  last$: Subject<number> = new Subject<number>();
 
   @Output('selectPage')
   selectPage$: Subject<number> = new Subject<number>();
